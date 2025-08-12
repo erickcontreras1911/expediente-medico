@@ -1,0 +1,100 @@
+/* ---- Variables ---- */
+:root{
+  --sb-expanded: 260px;
+  --sb-collapsed: 72px;
+  --sb-bg: #1e509b;   /* bootstrap primary vibe */
+  --sb-fg: #e7f1ff;
+}
+
+/* Reset mínimo */
+html, body, #root { height: 100%; }
+body { margin: 0; background: #f6f7fb; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+
+/* ---- Layout ---- */
+.layout { position: relative; min-height: 100%; }
+.main { margin-left: var(--sb-expanded); transition: margin-left .25s ease; }
+
+/* ---- Topbar ---- */
+.topbar{
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; gap: .75rem;
+  background: #fff; border-bottom: 1px solid #e9ecef; padding: .5rem .75rem .5rem calc(.75rem + var(--sb-collapsed));
+}
+.topbar__btn{ display: inline-flex; align-items: center; gap: .5rem; }
+.topbar__title{ margin-left: auto; color: #6c757d; font-size: .9rem; }
+
+/* ---- Sidebar ---- */
+.sb{
+  position: fixed; inset: 0 auto 0 0; z-index: 20;
+  width: var(--sb-expanded); background: var(--sb-bg); color: #fff;
+  transition: width .25s ease; overflow-y: auto;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.08) inset, 0 2px 10px rgba(0,0,0,.08);
+}
+.sb__brand{
+  display: flex; align-items: center; gap: .75rem;
+  padding: 1rem .75rem; font-weight: 700;
+}
+.sb__logo{
+  width: 36px; height: 36px; display: grid; place-items: center;
+  background: rgba(255,255,255,.18); border-radius: 10px;
+}
+.sb__nav{ list-style: none; margin: 0; padding: .25rem .5rem 1rem; }
+.sb__link{
+  display: flex; align-items: center; gap: .75rem;
+  padding: .6rem .75rem; border-radius: .65rem;
+  color: var(--sb-fg); text-decoration: none;
+}
+.sb__link:hover{ background: rgba(255,255,255,.12); color: #fff; }
+.sb__link.active{ background: #fff; color: #0d6efd; }
+.sb__link .label{ white-space: nowrap; }
+
+/* ---- Colapsado ---- */
+.layout--collapsed .sb{ width: var(--sb-collapsed); }
+.layout--collapsed .main{ margin-left: var(--sb-collapsed); }
+.layout--collapsed .sb__brandText,
+.layout--collapsed .sb__link .label{
+  display: none !important;
+}
+.layout--collapsed .sb__link{
+  justify-content: center;
+}
+
+/* ---- Util ---- */
+.container-fluid{ max-width: 1280px; }
+.card{ border: 1px solid #e9ecef; border-radius: .75rem; background: #fff; }
+.btn{ cursor: pointer; }
+
+/* Topbar: que inicie a la derecha del sidebar */
+.topbar{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  background: #fff;
+  border-bottom: 1px solid #e9ecef;
+
+  /* 👉 padding-left igual al ancho del sidebar expandido */
+  padding: .5rem .75rem .5rem calc(var(--sb-expanded) + .75rem);
+}
+
+/* Cuando el sidebar está colapsado, reduce el padding-left */
+.layout--collapsed .topbar{
+  padding-left: calc(var(--sb-collapsed) + .75rem);
+}
+
+.topbar__btn{
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+.topbar__title{
+  margin-left: auto;
+  color: #6c757d;
+  font-size: .9rem;
+}
+
+/* detalles visuales Ficha */
+.card { border-radius: .75rem; }
+.form-label { font-weight: 500; }
