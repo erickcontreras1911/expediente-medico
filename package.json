@@ -1,0 +1,10 @@
+{
+  "name": "expediente-medico",
+  "private": true,
+  "workspaces": ["client", "server"],
+  "scripts": {
+    "setup": "npm install",
+    "dev": "npm run dev -w client",
+    "server": "npm start -w server"
+  }
+}
