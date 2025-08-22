@@ -51,9 +51,9 @@ const Home = () => {
   }, []);
 
   const citas = [
-    { fecha: "12/08/2025", hora: "09:00", paciente: "Juan Pérez", motivo: "Consulta general" },
-    { fecha: "12/08/2025", hora: "10:30", paciente: "María López", motivo: "Control post-operatorio" },
-    { fecha: "12/08/2025", hora: "11:15", paciente: "Carlos Martínez", motivo: "Revisión de laboratorio" }
+    { fecha: "12/08/2025", hora: "09:00", paciente: "José Pérez", motivo: "Consulta general" },
+    { fecha: "12/08/2025", hora: "10:30", paciente: "José Pérez", motivo: "Control post-operatorio" },
+    { fecha: "12/08/2025", hora: "11:15", paciente: "José Pérez", motivo: "Revisión de laboratorio" }
   ];
 
   return (
