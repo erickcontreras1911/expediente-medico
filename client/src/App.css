@@ -98,3 +98,52 @@ body { margin: 0; background: #f6f7fb; font-family: system-ui, -apple-system, Se
 /* detalles visuales Ficha */
 .card { border-radius: .75rem; }
 .form-label { font-weight: 500; }
+
+/* ===== Submenús ===== */
+.sb__groupBtn{
+  width: 100%;
+  display: flex; align-items: center; gap: .75rem;
+  padding: .6rem .75rem; border-radius: .65rem;
+  color: var(--sb-fg); background: transparent; border: 0; text-align: left;
+  cursor: pointer;
+}
+.sb__groupBtn:hover{ background: rgba(255,255,255,.12); color: #fff; }
+
+.sb__chev{
+  margin-left: auto;
+  transition: transform .2s ease;
+  opacity: .9;
+}
+.sb__chev.open{ transform: rotate(180deg); }
+
+/* contenedor del submenú con transición */
+.sb__submenu{
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .22s ease;
+  margin-left: 2.15rem;   /* sangría para hijos */
+}
+.sb__submenu.open{ grid-template-rows: 1fr; }
+.sb__submenu > *{
+  overflow: hidden;       /* para animar altura */
+}
+
+/* links hijos */
+.sb__sublink{
+  display: flex; align-items: center; gap: .5rem;
+  color: #e7f1ff; text-decoration: none;
+  padding: .45rem .5rem; border-radius: .5rem; margin: .1rem 0;
+  opacity: .95;
+}
+.sb__sublink:hover{ background: rgba(255,255,255,.10); color: #fff; }
+.sb__sublink.active{ background: #fff; color: #0d6efd; }
+
+.sb__sublink .bullet{
+  width: 6px; height: 6px; border-radius: 50%;
+  background: currentColor; opacity: .7;
+}
+
+/* Cuando la sidebar está colapsada, ocultar textos y submenús */
+.layout--collapsed .sb__submenu{ display: none !important; }
+.layout--collapsed .sb__groupBtn .label{ display: none !important; }
+.layout--collapsed .sb__groupBtn{ justify-content: center; }
