@@ -27,7 +27,7 @@ export default function AppLayout() {
           <FontAwesomeIcon icon={faBars} />
             <span className="d-none d-sm-inline"></span>
         </button>
-        <div className="topbar__title">Expediente Médico — Demo</div>
+        <div className="topbar__title">Expediente Médico - Análisis de Sistemas 2</div>
       </header>
 
       <main className="main">

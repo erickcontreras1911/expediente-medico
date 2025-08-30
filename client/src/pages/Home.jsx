@@ -56,7 +56,7 @@ export default function Home() {
           <div className="card bg-white border-primary shadow-sm">
             <div className="card-body">
               <h5 className="card-title">Pacientes</h5>
-              <h2 className="fw-bold">999</h2>
+              <h2 className="fw-bold">325</h2>
               <p className="mb-0 small">Registrados este año</p>
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function Home() {
           <div className="card bg-white border-primary shadow-sm">
             <div className="card-body">
               <h5 className="card-title">Citas</h5>
-              <h2 className="fw-bold">999</h2>
+              <h2 className="fw-bold">432</h2>
               <p className="mb-0 small">En el último mes</p>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function Home() {
           <div className="card bg-white border-primary shadow-sm">
             <div className="card-body">
               <h5 className="card-title">Notas médicas</h5>
-              <h2 className="fw-bold">999</h2>
+              <h2 className="fw-bold">345</h2>
               <p className="mb-0 small">Registradas en total</p>
             </div>
           </div>
@@ -83,7 +83,7 @@ export default function Home() {
           <div className="card bg-white border-primary shadow-sm">
             <div className="card-body">
               <h5 className="card-title">Signos vitales</h5>
-              <h2 className="fw-bold">999</h2>
+              <h2 className="fw-bold">322</h2>
               <p className="mb-0 small">Registros históricos</p>
             </div>
           </div>

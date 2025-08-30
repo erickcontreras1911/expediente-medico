@@ -3,9 +3,10 @@ import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faHouse, faIdCard, faHeartPulse, faNotesMedical,
+  faHouse, faIdCard, faStethoscope, faHeartPulse,
   faCalendarCheck, faChartLine, faGear, faChevronDown, faFlaskVial
 } from "@fortawesome/free-solid-svg-icons";
+import { faHospital } from "@fortawesome/free-solid-svg-icons";
 
 const EXACT_MATCH = new Set(["/", "/citas"]);
 
@@ -33,7 +34,7 @@ const MENU = [
     ]
   },
   {
-    type: "group", key: "notas", label: "Notas médicas", icon: faNotesMedical, children: [
+    type: "group", key: "notas", label: "Notas médicas", icon: faStethoscope, children: [
       { to: "/notas/registrar",  label: "Registrar nota" },
       { to: "/notas/editar",     label: "Editar nota" },
       { to: "/notas/consultar",  label: "Consultar notas" },
@@ -103,7 +104,7 @@ export default function Sidebar({ collapsed, onExpand }) {   // 👈 recibe onEx
   return (
     <aside className={`sb ${collapsed ? "sb--collapsed" : ""}`}>
       <div className="sb__brand">
-        <div className="sb__logo"><FontAwesomeIcon icon={faHouse} /></div>
+        <div className="sb__logo"><FontAwesomeIcon icon={faHospital} /></div>
         <span className="sb__brandText">Expediente Médico</span>
       </div>
 
