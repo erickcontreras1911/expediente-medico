@@ -12,6 +12,7 @@ import ConsultarSignos from "./pages/signos/ConsultarSignos";
 import ConsultarNotas from "./pages/notas/ConsultarNotas";
 import ConsultarCitas from "./pages/citas/ConsultarCitas";
 import ConsultarReportes from "./pages/reportes/ConsultarReportes";
+import SolicitarExamenes from "./pages/examenes/SolicitarExamenes";
 
 export default function App() {
   return (
@@ -59,7 +60,7 @@ export default function App() {
           {/* Exámenes médicos */}
           <Route path="examenes">
             <Route index element={<Navigate to="consultar" replace />} />
-            <Route path="registrar" element={<div className="card p-3">Registrar examen (WIP)</div>} />
+            <Route path="solicitar" element={<SolicitarExamenes />} />
             <Route path="editar" element={<div className="card p-3">Editar examen (WIP)</div>} />
             <Route path="consultar" element={<div className="card p-3">Consultar exámenes (WIP)</div>} />
           </Route>

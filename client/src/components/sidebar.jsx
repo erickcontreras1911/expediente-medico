@@ -42,8 +42,8 @@ const MENU = [
   },
   {
     type: "group", key: "examenes", label: "Exámenes médicos", icon: faFlaskVial, children: [
-      { to: "/examenes/registrar", label: "Registrar examen" },
-      { to: "/examenes/editar",    label: "Editar examen" },
+      { to: "/examenes/solicitar", label: "Solicitar exámenes" },
+      { to: "/examenes/editar",    label: "Editar solicitud" },
       { to: "/examenes/consultar", label: "Consultar exámenes" },
     ]
   },
