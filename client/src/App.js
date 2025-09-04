@@ -7,6 +7,7 @@ import AppLayout from "./layouts/AppLayout";
 
 // Páginas existentes
 import Home from "./pages/Home";
+import MenuPrincipal from "./pages/MenuPrincipal"; 
 import CrearPaciente from "./pages/pacientes/CrearPaciente";
 import ConsultarSignos from "./pages/signos/ConsultarSignos";
 import ConsultarNotas from "./pages/notas/ConsultarNotas";
@@ -25,6 +26,9 @@ export default function App() {
         <Route element={<AppLayout />}>
           {/* Home */}
           <Route index element={<Home />} />
+
+          {/* NUEVA RUTA DE MENÚ */}
+          <Route path="menu" element={<MenuPrincipal />} />
 
           {/* Pacientes */}
           <Route path="pacientes">
